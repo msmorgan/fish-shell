@@ -18,6 +18,5 @@ function __fish_theme_cat -a theme_name
         string match -rq -- $allowed_lines $theme_data
         or printf >&2 "error: unsupported line in theme '%s': %s\n" $theme_name $line
     end
-    string join \n $theme_data
-    true
+    yield $theme_data
 end

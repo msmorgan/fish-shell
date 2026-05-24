@@ -11,6 +11,5 @@ function __fish_anyeditor
             (_ 'Please set VISUAL or EDITOR to your preferred editor.')
         return 1
     end
-    string join \n -- $editor
-    return 0
+    yield $editor
 end

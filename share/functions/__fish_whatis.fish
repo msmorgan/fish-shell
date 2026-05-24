@@ -11,11 +11,9 @@ function __fish_whatis
 
     set -l description (whatis $cmd 2>/dev/null | string replace -r '.*? - ' '')[1]
     if string match -qr -- "." "$description"
-        printf '%s\n' $description
-        return 0
+        yield $description
     else if not string match -q -- "$fallback" ""
-        printf '%s\n' $fallback
-        return 0
+        yield $fallback
     else
         return 1
     end

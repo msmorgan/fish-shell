@@ -18,5 +18,5 @@ function __fish_config_files
     else
         set -a paths (status list-files "$prefix/"$argv$suffix)
     end
-    string join \n $paths
+    yield $paths
 end

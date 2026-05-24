@@ -7,5 +7,5 @@ function __fish_theme_names
             set -a unique $name
         end
     end
-    string join \n -- $unique
+    yield $unique
 end

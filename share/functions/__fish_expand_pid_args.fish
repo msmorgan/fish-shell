@@ -8,7 +8,7 @@ function __fish_expand_pid_args
                 return 1
             end
         else
-            printf "%s\n" $arg
+            yield $arg
         end
     end
 end

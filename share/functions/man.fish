@@ -25,7 +25,7 @@ function man
         # Preserve the existing MANPATH, and default to the system path (the empty string).
         set manpath $fish_manpath (
             if set -q MANPATH
-                string join -- \n $MANPATH
+                yield $MANPATH
             else if set -l p (command man -p 2>/dev/null)
                 # NetBSD's man uses "-p" to print the path.
                 # FreeBSD's man also has a "-p" option, but that requires an argument.

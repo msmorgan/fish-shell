@@ -1,6 +1,6 @@
 # localization: skip(private)
 function __fish_locale_vars
-    string join -- \n \
+    yield \
         LANG \
         LC_ALL \
         LC_ADDRESS \

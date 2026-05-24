@@ -10,7 +10,7 @@ function __fish_theme_for_each
             echo default-rgb
             string match -rv -- '^(default|default-rgb)$' $matching_names
         else
-            string join -- \n $matching_names
+            yield $matching_names
         end
     )
         set -l theme_data (__fish_theme_cat $theme_name)

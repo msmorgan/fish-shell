@@ -1,7 +1,7 @@
 # localization: skip(private)
 function __fish_print_zfs_snapshots -d "Lists ZFS snapshots"
     set fast_results (zfs list -o name -H)
-    printf "%s\n" $fast_results
+    yield $fast_results
 
     # Don't retrieve all snapshots for all datasets until an @ is specified,
     # or if there is only one possible matching dataset. (See #7472)

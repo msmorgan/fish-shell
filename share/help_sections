@@ -122,6 +122,7 @@ cmds/umask
 cmds/vared
 cmds/wait
 cmds/while
+cmds/yield
 commands
 commands#helper-commands
 commands#helper-functions

@@ -63,6 +63,13 @@ string escape -- $result
 # CHECK: --help
 # CHECK: -h
 
+# Double-dash alone passes through
+set -l result (yield --)
+count $result
+# CHECK: 1
+string escape -- $result
+# CHECK: --
+
 # No arguments: no output, status 0
 set -l result (yield)
 count $result
